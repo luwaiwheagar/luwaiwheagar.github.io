@@ -1,0 +1,132 @@
+html, body
+{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body
+{
+	background-image: url("../Background/Server_Room.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.dark-overlay 
+{
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.logo-image
+{
+	width:150px;
+	height:120px;
+	float:right;
+}
+h1
+{
+	clear:both;
+}
+fieldset
+{
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	height: 80%;
+	background-color: white;
+	text-align: left;
+	overflow-y: scroll;
+}
+.title
+{
+	text-align: center;
+	color: black;
+}
+table, td
+{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+a
+{
+  color:black;
+}
+.print_button
+{
+  display: none;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: 2px solid #008CBA;
+  transition-duration: 0.4s;
+}
+.print_button:hover
+{
+  background-color: #008CBA;
+  color: white;
+}
+@media print 
+{
+	@page 
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	table, #key_courses
+	{
+		display:none;
+	}
+	body 
+	{
+		padding-top: 10px;
+		padding-bottom: 10px ;
+	}
+	div 
+	{
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+	
+}
+
+@media (orientation: portrait)
+{
+	fieldset
+	{
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 90%;
+		height: 80%;
+	}
+	.print_button
+	{
+	  font-size: 40px;
+	}
+}
+@media (orientation: landscape)
+{
+	fieldset
+	{
+		margin-left: 25%;
+		margin-right: 25%;
+		width: 50%;
+		height: 80%;
+	}
+	.print_button
+	{
+	  font-size: 16px;
+	}
+}
